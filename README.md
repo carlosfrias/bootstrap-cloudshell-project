@@ -1,5 +1,5 @@
-# Bootstrap Project Manager     [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/carlosfrias/bootstrap-cloudshell-project.git)
-This Dockerfile will allow you to provision and de-provision a GCP project. You
+# Bootstrap Project Manager     [![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_image=https://github.com/carlosfrias/bootstrap-cloudshell-project.git)
+This Cloud Shell instance will allow you to provision and de-provision a GCP project. You
 would provide the project name and credentials and execute the build. The steps
 provided below would allow you to capture the downloaded service account credential 
 files and any org policies that have been applied. This project manager uses 
