@@ -101,8 +101,8 @@ The following instructions are to get started and quickly bring up a functional 
        BILLING_ID: "CHANGE_ME"
        GCLOUD_ACCOUNT_USER: "CHANGE_ME"
 
-7. It is required that you `resources/override.yml` with your project name. Attributes defined in `resources/override.yml'
-   Please note that the `FOLDER_DISPLAY_NAME` enables you to use a GCP folder under which to contain your project. 
+7. It is required that you `resources/override.yml` with your project name. Attributes defined in `resources/override.yml` will override attributes defined in `resources/defaults.yml`.
+Please note that the `FOLDER_DISPLAY_NAME` enables you to use a GCP folder under which to contain your project. 
 
        ---
        PROJECT_ID: "friasc-runtime-MMDDYYYY_HHMM"
