@@ -1,4 +1,6 @@
-# Bootstrap Project Manager     [![Open Bootstrap Project Manager in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_image=https://github.com/carlosfrias/bootstrap-cloudshell-project.git&cloudshell_tutorial=/home/admin_/bootstrap-cloudshell-project/tutorial.md)       
+# Bootstrap Project Manager     [![Open Bootstrap Project Manager in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://shell.cloud.google.com/cloudshell/editor?cloudshell_image=https://github.com/carlosfrias/bootstrap-cloudshell-project.git)       
+
+[//]  [![Open Bootstrap Project Manager in Cloud Shell]&#40;https://gstatic.com/cloudssh/images/open-btn.svg&#41;]&#40;https://shell.cloud.google.com/cloudshell/editor?cloudshell_image=https://github.com/carlosfrias/bootstrap-cloudshell-project.git&cloudshell_tutorial=/home/admin_/bootstrap-cloudshell-project/tutorial.md&#41;       )
 This Cloud Shell instance will allow you to provision and de-provision a GCP project. You
 would provide the project name and credentials and execute the build. The steps
 provided below would allow you to capture the downloaded service account credential 
