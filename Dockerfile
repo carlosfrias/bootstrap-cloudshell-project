@@ -22,7 +22,7 @@ RUN curl https://pyenv.run | bash \
 
 
 
-FROM pyenv
+FROM basic_bootstrap
 VOLUME /bootstrap-runtime
 WORKDIR /bootstrap-runtime
 COPY molecule /bootstrap-runtime/molecule/
