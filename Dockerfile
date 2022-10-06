@@ -1,5 +1,4 @@
 
-#FROM python:3.10.2 AS basic_bootstrap
 FROM gcr.io/cloudshell-images/cloudshell:latest as basic_bootstrap
 RUN sudo apt-get update -y \
     && sudo apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg -y
@@ -25,7 +24,7 @@ WORKDIR /bootstrap-runtime
 COPY molecule /bootstrap-runtime/molecule/
 COPY docker-helper /bootstrap-runtime/docker-helper/
 COPY resources /bootstrap-runtime/resources/
-RUN bash -l /bootstrap-runtime/docker-helper/docker-helper-config-pyenv.sh \
+RUN bash -l /bootstrap-runtime/docker-helper/docker-helper-activate-apigee.sh \
     && mkdir -p work_dir \
     && chmod -R +w work_dir
 ENTRYPOINT bash
