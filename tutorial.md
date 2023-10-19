@@ -1,6 +1,6 @@
-## Introduction to Bootstrap Project Manager
+## Bootstrap a GCP Project using this project manager
 
-This purpose of this tutorial is to enable you to get stated quickly managing a
+The purpose of this tutorial is to enable you to get stated quickly managing a
 GCP project. The steps needed include:
 
 1. Configure your credentials.
@@ -10,6 +10,7 @@ GCP project. The steps needed include:
 5. Create your service account.
 6. Obtain your service account key file.
 7. Update your service account permissions.
+8. Invoke the build.
 
 ## Configure your credentials
 
@@ -22,7 +23,7 @@ GCP project. The steps needed include:
 1. Use the provided credentials template file to create your credentials file in you secure credentials folder.
 
     ```sh
-    cp bootstrap-cloudshell-project/resources/credentials.yml.template  ~/.apigee-secure/credentials.yml
+    cp resources/credentials.yml.template  ~/.apigee-secure/credentials.yml
     ```
 
 1. Update your credentials file by replacing each `CHANGEME`. Assuming you followed the naming conventions in this tutorial then you can click
@@ -37,7 +38,7 @@ GCP project. The steps needed include:
     ```
 
 ## Set your project name
-1. The project name is picked up from the <walkthrough-editor-select-regex filePath="/home/admin_/bootstrap-cloudshell-project/resources/override.yml" regex="CHANGEME">override.yml</walkthrough-editor-select-regex> file.
+1. The project name is picked up from the <walkthrough-editor-select-regex filePath="/home/admin_/bootstrap-cloudshell-project/resources/override.yml" regex="PROJECT_ID:">override.yml</walkthrough-editor-select-regex> file.
 
 ## Update organization role bindings
 1. Please review default org role bindings. It is recommended that you update the default org role bindings in <walkthrough-editor-select-regex filePath="/home/admin_/bootstrap-cloudshell-project/resources/override.yml" regex="GCLOUD_ORG_ROLE_BINDINGS">override.yml</walkthrough-editor-select-regex> file.

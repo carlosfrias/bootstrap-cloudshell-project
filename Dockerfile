@@ -1,11 +1,8 @@
 
 FROM gcr.io/cloudshell-images/cloudshell:latest as basic_bootstrap
 RUN sudo apt-get update -y \
-    && sudo apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg -y
-
-
-FROM basic_bootstrap AS pyenv
-RUN curl https://pyenv.run | bash \
+    && sudo apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg -y \
+    && curl https://pyenv.run | bash \
     && echo '' >> /root/.bashrc \
     && echo 'export PYENV_ROOT="/root/.pyenv"' >> /root/.bashrc \
     && echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> /root/.bashrc \
