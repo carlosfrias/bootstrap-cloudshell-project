@@ -1,7 +1,13 @@
 ## Bootstrap a GCP Project using this project manager
 
-The purpose of this tutorial is to enable you to get stated quickly managing a
-GCP project. The steps needed include:
+This Cloud Shell instance will allow you to provision and de-provision a GCP project. 
+You would provide the project name and credentials and execute the build. 
+The steps provided below would allow you to capture the downloaded service account 
+credential files and any org policies that have been applied. This project manager 
+uses the gcloud cli.
+
+The steps you would need to complete would be
+
 
 1. Configure your credentials.
 2. Set your project name.
@@ -30,7 +36,6 @@ GCP project. The steps needed include:
    <walkthrough-editor-select-regex filePath="/home/admin_/.apigee-secure/credentials.yml" regex="CHANGEME">credentials.yml</walkthrough-editor-select-regex> to start your updates.
 
     ```yaml
-        ---
         GCLOUD_ORG_ID: "CHANGE_ME"
         GCLOUD_ACCOUNT_DOMAIN: "CHANGE_ME"
         BILLING_ID: "CHANGE_ME"

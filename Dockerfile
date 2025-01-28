@@ -1,27 +1,18 @@
 
 FROM gcr.io/cloudshell-images/cloudshell:latest as basic_bootstrap
-RUN sudo apt-get update -y \
-    && sudo apt-get install software-properties-common curl git mc vim facter aptitude apt-utils apt-transport-https ca-certificates gnupg -y \
-    && curl https://pyenv.run | bash \
-    && echo '' >> /root/.bashrc \
-    && echo 'export PYENV_ROOT="/root/.pyenv"' >> /root/.bashrc \
-    && echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> /root/.bashrc \
-    && echo 'eval "$(pyenv init -)"' >> /root/.bashrc \
-    && echo 'eval "$(pyenv virtualenv-init -)"' >> /root/.bashrc \
-    && bash /root/.bashrc \
-    && /root/.pyenv/bin/pyenv install 3.10.2 \
-    && /root/.pyenv/bin/pyenv global 3.10.2 \
-    && /root/.pyenv/bin/pyenv virtualenv 3.10.2 apigee \
-    && bash /root/.bashrc
+RUN apt-get update  \
+    && apt-get -y install apt-utils  \
+    && apt-get -y install lsof  \
+    && apt-get update  \
+    && apt-get install -y software-properties-common  \
+    && sudo apt-get install -y curl git mc vim facter aptitude apt-transport-https ca-certificates gnupg
 
-
-FROM pyenv
 VOLUME /bootstrap-runtime
 WORKDIR /bootstrap-runtime
 COPY molecule /bootstrap-runtime/molecule/
-COPY docker-helper /bootstrap-runtime/docker-helper/
 COPY resources /bootstrap-runtime/resources/
-RUN bash -l /bootstrap-runtime/docker-helper/docker-helper-activate-apigee.sh \
-    && mkdir -p work_dir \
-    && chmod -R +w work_dir
+COPY docker-helper/python-requirements.txt /bootstrap-runtime/python-requirements.txt
+RUN pip install -r python-requirements.txt
+RUN mkdir -p /bootstrap-runtime/work_dir \
+    && chmod -R +w /bootstrap-runtime/work_dir
 ENTRYPOINT bash
